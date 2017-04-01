@@ -24,3 +24,13 @@ $container->set('request',$request);
 $templating = $container->get('templating');
 echo $templating->render('EventBundle:Default:index.html.twig', array('name'=>'test'));
 
+use Yoda\EventBundle\Entity\Event;
+
+$event = new Event();
+$event->setName('Darth\'s surprise birthday party');
+$event->setLocation('Deathstar');
+$event->setTime(new \DateTime('tomorrow noon'));
+
+$em = $container->get('doctrine')->getManager();
+$em->persist($event);
+$em->flush();
