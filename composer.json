@@ -18,7 +18,8 @@
         "sensio/distribution-bundle": "~2.3",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -48,6 +49,6 @@
         "branch-alias": {
             "dev-master": "2.4-dev"
         },
-        "symfony-assets-install": "symlink",
+        "symfony-assets-install": "symlink"
     }
 }
