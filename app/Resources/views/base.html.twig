@@ -2,7 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>
+            {%- block title -%}
+               Welcome! | Starwars Events
+            {%- endblock -%}
+        </title>
         {% block stylesheets %}
             {% stylesheets
                 'bundles/event/css/event.css'

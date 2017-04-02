@@ -15,7 +15,7 @@ class LoadEventsData implements FixtureInterface
         $event->setLocation('Deathstar');
         $event->setTime(new \DateTime('tomorrow noon'));
         $manager->persist($event);
-        
+
         $manager->flush();
     }
 }
