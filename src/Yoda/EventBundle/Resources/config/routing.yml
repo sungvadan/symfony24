@@ -1,6 +1,6 @@
 event_event:
     resource: "@EventBundle/Resources/config/routing/event.yml"
-    prefix:   /event
+    prefix:   /
 
 event_homepage:
     path:     /helloa/{firstname}/{count}
