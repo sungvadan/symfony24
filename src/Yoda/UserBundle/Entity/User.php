@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * User
  *
- * @ORM\Table()
+ * @ORM\Table(name="yoda_user")
  * @ORM\Entity(repositoryClass="Yoda\UserBundle\Entity\UserRepository")
  */
 class User implements UserInterface
@@ -26,9 +26,9 @@ class User implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(name="userName", type="string", length=255)
+     * @ORM\Column(name="username", type="string", length=255)
      */
-    private $userName;
+    private $username;
 
     /**
      * @var string
@@ -54,9 +54,9 @@ class User implements UserInterface
      * @param string $userName
      * @return User
      */
-    public function setUserName($userName)
+    public function setUsername($userName)
     {
-        $this->userName = $userName;
+        $this->username = $userName;
 
         return $this;
     }
@@ -66,9 +66,9 @@ class User implements UserInterface
      *
      * @return string 
      */
-    public function getUserName()
+    public function getUsername()
     {
-        return $this->userName;
+        return $this->username;
     }
 
     /**
