@@ -25,7 +25,7 @@ class LoadUsersData implements FixtureInterface, ContainerAwareInterface
 
         $admin = new User();
         $admin->setUsername('wayne');
-        $admin->setEmail('darth@deathstar.com');
+        $admin->setEmail('wayne@deathstar.com');
         $admin->setRoles(array('ROLE_ADMIN'));
         $admin->setIsActive(true);
         $admin->setPassword($this->encodePassword($admin,'waynePass'));
