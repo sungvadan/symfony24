@@ -7,6 +7,13 @@
     <section class="login">
         <article>
             <h1>Register</h1>
+            {{  form_start(form) }}
+                {{ form_row(form.username) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.password) }}
+                {{ form_rest(form) }}
+                <input type="submit" class="btn btn-md btn-primary col-md-3 pull-right" value="Submit">
+            {{ form_end(form) }}
         </article>
     </section>
 {% endblock %}

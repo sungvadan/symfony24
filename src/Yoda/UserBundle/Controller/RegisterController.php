@@ -22,7 +22,7 @@ class RegisterController extends Controller
             ->add('email','text')
             ->add('password','text')
             ->getForm();
-        return array('form'=> $form);
+        return array('form'=> $form->createView());
     }
 
 
