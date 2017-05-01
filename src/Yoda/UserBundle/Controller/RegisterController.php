@@ -19,8 +19,10 @@ class RegisterController extends Controller
     {
         $form = $this->createFormBuilder()
             ->add('username','text')
-            ->add('email','text')
-            ->add('password','text')
+            ->add('email','email')
+            ->add('password','repeated',array(
+                'type' => 'password'
+            ))
             ->getForm();
         return array('form'=> $form->createView());
     }
