@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Yoda\UserBundle\Entity\User;
+use Yoda\UserBundle\Form\RegisterFormType;
 
 class RegisterController extends Controller
 {
@@ -21,15 +22,7 @@ class RegisterController extends Controller
     {
         $user = new User();
         $user->setUsername('leila');
-        $form = $this->createFormBuilder($user,array(
-            'data_class' => 'Yoda\UserBundle\Entity\User'
-        ))
-            ->add('username','text')
-            ->add('email','email')
-            ->add('plainPassword','repeated',array(
-                'type' => 'password'
-            ))
-            ->getForm();
+        $form = $this->createForm(new RegisterFormType(), $user);
         $form->handleRequest($request);
         if($form->isValid()){
             $user->setPassword($this->encodePassword($user, $user->getPlainPassword()));
