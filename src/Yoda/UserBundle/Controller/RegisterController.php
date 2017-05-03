@@ -22,7 +22,7 @@ class RegisterController extends Controller
     public function RegisterAction(Request $request)
     {
         $user = new User();
-        $user->setUsername('leila');
+        $user->setUsername('Leia');
         $form = $this->createForm(new RegisterFormType(), $user);
         $form->handleRequest($request);
         if($form->isValid()){
