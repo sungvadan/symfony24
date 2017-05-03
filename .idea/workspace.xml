@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="099dfe73-7a99-49fa-9b27-67abb1b94f96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php" afterPath="$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/Register.html.twig" afterPath="$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/Register.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,13 +47,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
-                <element signature="e#42#74#0#PHP" expanded="false" />
+                <element signature="e#41#95#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
                 <element signature="e#41#81#0#PHP" expanded="true" />
               </folding>
@@ -126,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Register.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Register.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/Register.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -199,10 +198,10 @@
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Controller/RegisterController.php" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/Register.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php" />
       </list>
     </option>
   </component>
@@ -946,12 +945,12 @@
       <workItem from="1493813613464" duration="60000" />
       <workItem from="1493813693988" duration="26000" />
       <workItem from="1493813739153" duration="15000" />
-      <workItem from="1493813777657" duration="1713000" />
+      <workItem from="1493813777657" duration="2767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38519000" />
+    <option name="totallyTimeSpent" value="39573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -1332,16 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#42#74#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Controller/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1355,7 +1344,7 @@
     <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
           <folding>
             <element signature="e#41#81#0#PHP" expanded="true" />
           </folding>
@@ -1367,6 +1356,16 @@
         <state relative-caret-position="162">
           <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="e#41#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

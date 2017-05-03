@@ -1,16 +1,21 @@
 <?php
 
 namespace Yoda\UserBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
  * User
  *
  * @ORM\Table(name="yoda_user")
  * @ORM\Entity(repositoryClass="Yoda\UserBundle\Entity\UserRepository")
+ * @UniqueEntity(fields={"email"})
+ * @UniqueEntity(fields={"username"})
  */
 class User implements AdvancedUserInterface, \Serializable
 {
@@ -25,14 +30,16 @@ class User implements AdvancedUserInterface, \Serializable
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Username is required")
+     * @Assert\Length(min="3", minMessage="Give us at least 3 characters")
      * @ORM\Column(name="username", type="string", length=255)
      */
     private $username;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Username is required")
+     * @Assert\Email()
      * @ORM\Column(name="email", type="string", length=255, unique=true)
      */
     private $email;
@@ -46,6 +53,11 @@ class User implements AdvancedUserInterface, \Serializable
 
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *  pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/",
+     *  message="Use 1 upper case letter, 1 lower case letter, and 1 number"
+     * )
      */
     private $plainPassword;
 
