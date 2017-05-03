@@ -7,7 +7,7 @@
     <section class="login">
         <article>
             <h1>Register</h1>
-            {{  form_start(form) }}
+            {{  form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
                 {{ form_row(form.username) }}
                 {{ form_row(form.email) }}
                 {{ form_row(form.plainPassword.first,{'label' : 'Password'}) }}
