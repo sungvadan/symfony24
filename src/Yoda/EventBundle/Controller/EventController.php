@@ -80,7 +80,7 @@ class EventController extends Controller
      */
     public function newAction()
     {
-        $this->enforceUserSecurity();
+        $this->enforceUserSecurity('ROLE_EVENT_CREATE');
         $entity = new Event();
         $form   = $this->createCreateForm($entity);
 
@@ -228,11 +228,11 @@ class EventController extends Controller
         ;
     }
 
-    private function enforceUserSecurity()
+    private function enforceUserSecurity($role = 'ROLE_USER')
     {
         $securityContext = $this->get('security.context');
-        if (!$securityContext->isGranted('ROLE_USER')) {
-            throw new AccessDeniedException('Access denied. Need Role USER');
+        if (!$securityContext->isGranted($role)) {
+            throw new AccessDeniedException('Access denied. Need '.$role);
         }
     }
 }
