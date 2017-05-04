@@ -4,8 +4,8 @@ security:
 
     role_hierarchy:
         ROLE_USER:        [ROLE_BLOG_CREATE, ROLE_EVENT_CREATE]
-        ROLE_ADMIN:       [ROLE_USER, ROLE_EVENT_CREATE]
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH,ROLE_EVENT_CREATE]
+        ROLE_ADMIN:       [ROLE_USER, ROLE_EVENT_CREATE,ROLE_ALLOWED_TO_SWITCH]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
         database_users:
@@ -20,6 +20,7 @@ security:
                 path:   logout
                 target: event
             anonymous: ~
+            switch_user: ~
             #http_basic:
             #    realm: "Secured Demo Area"
 
