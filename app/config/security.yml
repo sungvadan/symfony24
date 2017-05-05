@@ -21,6 +21,8 @@ security:
                 target: event
             anonymous: ~
             switch_user: ~
+            remember_me:
+                key: "key test remember me"
             #http_basic:
             #    realm: "Secured Demo Area"
 
