@@ -4,7 +4,6 @@ namespace Yoda\EventBundle\Controller;
 
 use Symfony\Component\Finder\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Yoda\EventBundle\Entity\Event;
 use Yoda\EventBundle\Form\EventType;
@@ -128,6 +127,7 @@ class EventController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Event entity.');
         }
+        $this->enforceOwnerSecurity($entity);
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -171,6 +171,7 @@ class EventController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Event entity.');
         }
+        $this->enforceOwnerSecurity($entity);
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
@@ -206,6 +207,8 @@ class EventController extends Controller
                 throw $this->createNotFoundException('Unable to find Event entity.');
             }
 
+            $this->enforceOwnerSecurity($entity);
+
             $em->remove($entity);
             $em->flush();
         }
@@ -232,8 +235,8 @@ class EventController extends Controller
 
     private function enforceUserSecurity($role = 'ROLE_USER')
     {
-        $securityContext = $this->get('security.context');
-        if (!$securityContext->isGranted($role)) {
+
+        if (!$this->getSecurityContext()->isGranted($role)) {
             throw new AccessDeniedException('Access denied. Need '.$role);
         }
     }

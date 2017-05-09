@@ -56,7 +56,7 @@ class Event
      * @ORM\ManyToOne(targetEntity="Yoda\UserBundle\Entity\User")
      * @ORM\JoinColumn(onDelete="CASCADE")
      */
-    private $user;
+    private $owner;
 
 
 
@@ -165,16 +165,16 @@ class Event
     /**
      * @return User
      */
-    public function getUser()
+    public function getOwner()
     {
-        return $this->user;
+        return $this->owner;
     }
 
     /**
      * @param User $user
      */
-    public function setUser(User $user)
+    public function setOwner(User $user)
     {
-        $this->user = $user;
+        $this->owner = $user;
     }
 }

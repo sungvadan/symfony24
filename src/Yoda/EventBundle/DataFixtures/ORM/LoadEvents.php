@@ -16,7 +16,7 @@ class LoadEventsData implements FixtureInterface, OrderedFixtureInterface
         $event->setName('Darth\'s surprise birthday party');
         $event->setLocation('Deathstar');
         $event->setTime(new \DateTime('tomorrow noon'));
-        $event->setUser($user);
+        $event->setOwner($user);
         $manager->persist($event);
 
         $manager->flush();
