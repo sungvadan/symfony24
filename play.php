@@ -21,16 +21,17 @@ $container->set('request',$request);
 
 
 // all the setup is done !!! Woo hoo
-$templating = $container->get('templating');
-echo $templating->render('EventBundle:Default:index.html.twig', array('name'=>'test'));
+//$templating = $container->get('templating');
+//echo $templating->render('EventBundle:Default:index.html.twig', array('name'=>'test'));
 
 use Yoda\EventBundle\Entity\Event;
 
-$event = new Event();
-$event->setName('Darth\'s surprise birthday party');
-$event->setLocation('Deathstar');
-$event->setTime(new \DateTime('tomorrow noon'));
-
+use Doctrine\ORM\EntityManager;
+/* @var EntityManager $em */
 $em = $container->get('doctrine')->getManager();
-$em->persist($event);
-$em->flush();
+$user = $em->getRepository('UserBundle:User')->findOneByUsernameOrEmail('darth');
+
+foreach ($user->getEvents() as  $event)
+{
+    var_dump($event->getName());
+}
