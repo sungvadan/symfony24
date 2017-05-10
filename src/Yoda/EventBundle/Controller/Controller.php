@@ -9,6 +9,9 @@ use Symfony\Component\Finder\Exception\AccessDeniedException;
 class Controller extends BaseController
 {
 
+    /**
+     * @return object|\Symfony\Component\Security\Core\SecurityContext
+     */
     public function getSecurityContext()
     {
         return $this->container->get('security.context');
