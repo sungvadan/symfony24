@@ -21,7 +21,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "symfony/var-dumper": "^3.2",
-        "phpunit/phpunit": "~4.1"
+        "phpunit/phpunit": "~4.1",
+        "stof/doctrine-extensions-bundle": "^1.2"
     },
     "scripts": {
         "post-install-cmd": [

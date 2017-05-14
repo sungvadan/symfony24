@@ -4,6 +4,7 @@ namespace Yoda\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Yoda\UserBundle\Entity\User;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Event
@@ -61,6 +62,11 @@ class Event
      */
     private $owner;
 
+    /**
+     * @Gedmo\Slug(fields={"name"}, updatable=false)
+     * @ORM\Column(name="slug",type="string", unique=true)
+     */
+    private $slug;
 
 
     /**
