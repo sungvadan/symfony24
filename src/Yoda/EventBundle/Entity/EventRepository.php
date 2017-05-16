@@ -12,4 +12,14 @@ use Doctrine\ORM\EntityRepository;
  */
 class EventRepository extends EntityRepository
 {
+
+    public function getUpComingEvents()
+    {
+        return $this->createQueryBuilder('e')
+            ->orderBy('e.time')
+            ->andWhere('e.time > :now')
+            ->setParameter('now', new \DateTime())
+            ->getQuery()
+            ->getResult();
+    }
 }
