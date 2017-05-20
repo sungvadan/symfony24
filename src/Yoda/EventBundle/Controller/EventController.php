@@ -139,6 +139,34 @@ class EventController extends Controller
         ));
     }
 
+
+    public function attendAction($id)
+    {
+
+        $this->enforceUserSecurity();
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('EventBundle:Event')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Event entity.');
+        }
+
+        $entity->addAttendee($this->getUser());
+        $em->persist($entity);
+        $em->flush();
+
+        $url = $this->generateUrl('event_show', array('slug' =>$entity->getSlug()));
+        return $this->redirect($url);
+
+    }
+
+    public function unattendAction($id)
+    {
+
+
+    }
+
     /**
     * Creates a form to edit a Event entity.
     *

@@ -91,14 +91,6 @@ class Event
 
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->attendees = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
      * Get id
      *
      * @return integer 
@@ -263,40 +255,5 @@ class Event
     {
         $this->updatedAt = $updatedAt;
     }
-
-
-    /**
-     * Add attendees
-     *
-     * @param \Yoda\UserBundle\Entity\User $attendees
-     * @return Event
-     */
-    public function addAttendee(\Yoda\UserBundle\Entity\User $attendees)
-    {
-        $this->attendees[] = $attendees;
-
-        return $this;
-    }
-
-    /**
-     * Remove attendees
-     *
-     * @param \Yoda\UserBundle\Entity\User $attendees
-     */
-    public function removeAttendee(\Yoda\UserBundle\Entity\User $attendees)
-    {
-        $this->attendees->removeElement($attendees);
-    }
-
-    /**
-     * Get attendees
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getAttendees()
-    {
-        return $this->attendees;
-    }
-
 
 }

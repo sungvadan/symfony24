@@ -30,7 +30,16 @@
                         <dd>{{ entity.time | date('g:ia / l M j, Y') }}</dd>
 
                         <dt>who:</dt>
-                        <dd>Todo # of people</dd>
+                        <dd>
+                            <ul>
+                                {% for attendee in entity.attendees %}
+                                    <li>{{ attendee }}</li>
+                                {% else %}
+                                    <li>no Body! yet</li>
+                                {% endfor %}    
+                            </ul>
+
+                        </dd>
                     </dl>
                 </section>
             </article>
