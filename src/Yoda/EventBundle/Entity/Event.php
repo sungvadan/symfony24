@@ -298,5 +298,9 @@ class Event
         return $this->attendees;
     }
 
+    public function hasAttendee(User $user)
+    {
+        return $this->attendees->contains($user);
+    }
 
 }

@@ -40,7 +40,11 @@
                             <li>no Body! yet</li>
                             {% endfor %}
                         </ul>
-                        <a href="{{ path('event_attend',{'id':entity.id}) }}" class="btn btn-success"> I will come to the party</a>
+                        {% if not entity.hasAttendee(app.user) %}
+                            <a href="{{ path('event_attend',{'id':entity.id}) }}" class="btn btn-success"> I will come to the party</a>
+                        {% else %}
+                            <a href="{{ path('event_unattend',{'id':entity.id}) }}" class="btn btn-warning"> I will not come to the party</a>
+                        {% endif %}
                     </dd>
                 </dl>
             </section>
