@@ -3,6 +3,7 @@
 namespace Yoda\EventBundle\Controller;
 
 use Symfony\Component\Finder\Exception\AccessDeniedException;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 use Yoda\EventBundle\Entity\Event;
@@ -140,7 +141,7 @@ class EventController extends Controller
     }
 
 
-    public function attendAction($id)
+    public function attendAction($id, $format)
     {
 
         $this->enforceUserSecurity();
@@ -158,6 +159,12 @@ class EventController extends Controller
         $em->persist($entity);
         $em->flush();
 
+        if($format == 'json'){
+            $data = array(
+              'attending' => true
+            );
+            return new JsonResponse($data);
+        }
         $url = $this->generateUrl('event_show', array('slug' =>$entity->getSlug()));
         return $this->redirect($url);
 

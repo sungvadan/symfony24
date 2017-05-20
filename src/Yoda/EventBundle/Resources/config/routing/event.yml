@@ -31,8 +31,8 @@ event_delete:
 
 
 event_attend:
-    path:     /{id}/attend
-    defaults: { _controller: "EventBundle:Event:attend" }
+    path:     /{id}/attend.{format}
+    defaults: { _controller: "EventBundle:Event:attend", format:html }
 
 event_unattend:
     path:     /{id}/unattend
