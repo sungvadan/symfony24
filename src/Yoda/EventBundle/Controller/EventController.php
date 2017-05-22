@@ -158,19 +158,10 @@ class EventController extends Controller
         }
         $em->persist($entity);
         $em->flush();
-
-        if($format == 'json'){
-            $data = array(
-              'attending' => true
-            );
-            return new JsonResponse($data);
-        }
-        $url = $this->generateUrl('event_show', array('slug' =>$entity->getSlug()));
-        return $this->redirect($url);
-
+        $this->createAttendingResponse($entity, $format);
     }
 
-    public function unattendAction($id)
+    public function unattendAction($id, $format)
     {
 
         $this->enforceUserSecurity();
@@ -187,10 +178,21 @@ class EventController extends Controller
         }
         $em->persist($entity);
         $em->flush();
+        $this->createAttendingResponse($entity, $format);
 
-        $url = $this->generateUrl('event_show', array('slug' =>$entity->getSlug()));
+
+    }
+
+    private function createAttendingResponse(Event $event, $format)
+    {
+        if($format == 'json'){
+            $data = array(
+                'attending' => $event->hasAttendee($this->getUser())
+            );
+            return new JsonResponse($data);
+        }
+        $url = $this->generateUrl('event_show', array('slug' =>$event->getSlug()));
         return $this->redirect($url);
-
 
     }
 
