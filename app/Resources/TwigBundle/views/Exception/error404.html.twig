@@ -10,4 +10,7 @@
             <div>The server are on fire!...</div>
         </article>
     </section>
+    <section class="events">
+        {{ render(controller('EventBundle:Event:_upcomingEvents')) }}
+    </section>
 {% endblock %}
