@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="099dfe73-7a99-49fa-9b27-67abb1b94f96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data.db3" afterPath="$PROJECT_DIR$/app/data.db3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/EventBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/Yoda/EventBundle/Controller/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing/event.yml" afterPath="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing/event.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig" afterPath="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -65,8 +66,42 @@
       <file leaf-file-name="EventController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="160" column="57" lean-forward="false" selection-start-line="160" selection-start-column="57" selection-end-line="160" selection-end-column="57" />
+            <state relative-caret-position="36">
+              <caret line="85" column="21" lean-forward="true" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+              <folding>
+                <element signature="e#47#108#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="483" column="20" lean-forward="false" selection-start-line="483" selection-start-column="20" selection-end-line="483" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <marker date="1495456238674" expanded="true" signature="1708:1983" ph="{% block javascripts ...%}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/edit.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -85,8 +120,8 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="42" column="35" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+            <state relative-caret-position="225">
+              <caret line="47" column="78" lean-forward="false" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -130,6 +165,8 @@
       <find>sym</find>
       <find>id</find>
       <find>$this-&gt;redirect($this-&gt;generateUrl('event_show'</find>
+      <find>$request</find>
+      <find>re</find>
     </findStrings>
     <replaceStrings>
       <replace>$admin</replace>
@@ -161,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Form/RegisterFormType.php" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Resources/views/Register/Register.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Tests/Controller/RegisterControllerTest.php" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
@@ -181,9 +217,10 @@
         <option value="$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Entity/Event.php" />
-        <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig" />
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing/event.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Controller/EventController.php" />
+        <option value="$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig" />
       </list>
     </option>
   </component>
@@ -925,12 +962,12 @@
       <workItem from="1494876439470" duration="2518000" />
       <workItem from="1494960047268" duration="1001000" />
       <workItem from="1495301025678" duration="3609000" />
-      <workItem from="1495449578912" duration="355000" />
+      <workItem from="1495449578912" duration="2459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65526000" />
+    <option name="totallyTimeSpent" value="67630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -984,14 +1021,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Token/UsernamePasswordToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/3c8f9808/23381459-8a17-49a0-9a86-83bf13cd5d61/yoda_user" />
     <entry file="dbDummy://dbtable:/3c8f9808/23381459-8a17-49a0-9a86-83bf13cd5d61/yoda_user" />
     <entry file="dbDummy://dbtable:/3c8f9808/23381459-8a17-49a0-9a86-83bf13cd5d61/yoda_user" />
     <entry file="dbDummy://dbtable:/3c8f9808/23381459-8a17-49a0-9a86-83bf13cd5d61/yoda_user" />
@@ -1182,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3ce8e9fb-83a3-4ebe-96eb-d928703b1fba/console.sql" />
     <entry file="dbDummy://dbtable:/475845e7/3ce8e9fb-83a3-4ebe-96eb-d928703b1fba/main.yoda_event" />
     <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Entity/EventRepository.php">
@@ -1214,14 +1236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="42" column="35" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yoda/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -1240,6 +1254,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1495456238674" expanded="true" signature="1708:1983" ph="{% block javascripts ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="483" column="20" lean-forward="false" selection-start-line="483" selection-start-column="20" selection-end-line="483" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/config/routing/event.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
@@ -1248,11 +1288,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Resources/views/Event/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="47" column="78" lean-forward="false" selection-start-line="47" selection-start-column="78" selection-end-line="47" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yoda/EventBundle/Controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="160" column="57" lean-forward="false" selection-start-line="160" selection-start-column="57" selection-end-line="160" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="36">
+          <caret line="85" column="21" lean-forward="true" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
+          <folding>
+            <element signature="e#47#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

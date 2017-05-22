@@ -41,13 +41,37 @@
                             {% endfor %}
                         </ul>
                         {% if not  entity.hasAttendee(app.user) %}
-                            <a href="{{ path('event_attend',{'id':entity.id}) }}" class="btn btn-success"> I will come to the party</a>
+                            <a href="{{ path('event_attend',{'id':entity.id,'format':'json'}) }}" class="btn btn-success js-attend-toogle">
+                                I will come to the party
+                            </a>
                         {% else %}
-                            <a href="{{ path('event_unattend',{'id':entity.id}) }}" class="btn btn-warning"> I will not come to the party</a>
+                            <a href="{{ path('event_unattend',{'id':entity.id,'format':'json'}) }}" class="btn btn-warning js-attend-toogle">
+                                I will not come to the party
+                            </a>
                         {% endif %}
                     </dd>
                 </dl>
             </section>
         </article>
     </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $('.js-attend-toogle').click(function(event){
+            event.preventDefault()
+            var $anchor = $(this);
+            var $url = $(this).attr('href')
+            $.post($url, function (data) {
+                if(data.attending){
+                    message = 'see you there'
+                }else{
+                    message = 'we\'ll miss you'
+                }
+                $anchor.after('<div class="label label-default">'+message+'</div>');
+                $anchor.hide();
+            })
+        })
+    </script>
 {% endblock %}

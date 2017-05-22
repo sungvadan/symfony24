@@ -43,7 +43,7 @@ class EventController extends Controller
 
         if ($form->isValid()) {
             $user = $this->getUser();
-            $entity->setUser($user);
+            $entity->setOwner($user);
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -158,7 +158,7 @@ class EventController extends Controller
         }
         $em->persist($entity);
         $em->flush();
-        $this->createAttendingResponse($entity, $format);
+        return $this->createAttendingResponse($entity, $format);
     }
 
     public function unattendAction($id, $format)
@@ -178,7 +178,7 @@ class EventController extends Controller
         }
         $em->persist($entity);
         $em->flush();
-        $this->createAttendingResponse($entity, $format);
+        return $this->createAttendingResponse($entity, $format);
 
 
     }
