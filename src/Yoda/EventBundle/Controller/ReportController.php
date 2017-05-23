@@ -15,7 +15,6 @@ class ReportController extends Controller
 
         $reportingManager = $this->container->get('report_event_manager');
         $content = $reportingManager->getRecentlyUpdatedReport();
-
         $response = new Response($content);
         $response->headers->set('Content-Type', 'text/csv');
         return $response;
