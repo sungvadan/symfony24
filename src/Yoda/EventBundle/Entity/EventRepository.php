@@ -22,4 +22,17 @@ class EventRepository extends EntityRepository
             ->getQuery()
             ->getResult();
     }
+
+
+    /**
+     * @return Event[]
+     */
+    public function getRecentlyUpdatedEvents()
+    {
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.createdAt >= :since')
+            ->setParameter('since', new \DateTime('24 hours ago'))
+            ->getQuery()
+            ->getResult();
+    }
 }

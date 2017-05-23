@@ -2,6 +2,6 @@ event_event:
     resource: "@EventBundle/Resources/config/routing/event.yml"
     prefix:   /
 
-event_homepage:
-    path:     /helloa/{firstname}/{count}
-    defaults: { _controller: EventBundle:Default:index }
+report:
+    resource: "@EventBundle/Controller/ReportController.php"
+    type:     annotation
