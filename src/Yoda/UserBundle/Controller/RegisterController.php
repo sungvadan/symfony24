@@ -26,7 +26,6 @@ class RegisterController extends Controller
         $form = $this->createForm(new RegisterFormType(), $user);
         $form->handleRequest($request);
         if($form->isValid()){
-            $user->setPassword($this->encodePassword($user, $user->getPlainPassword()));
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
@@ -41,10 +40,6 @@ class RegisterController extends Controller
         return array('form'=> $form->createView());
     }
 
-    private function encodePassword(User $user, $plainPassword){
-        $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
-        return $encoder->encodePassword($plainPassword, $user->getSalt());
-    }
     private function autheticateUser(User $user)
     {
         $providerKey = 'secured_area';

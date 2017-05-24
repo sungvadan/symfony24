@@ -21,7 +21,7 @@ class LoadUsersData implements FixtureInterface, ContainerAwareInterface, Ordere
         $user = new User();
         $user->setUsername('darth');
         $user->setEmail('darth@deathstar.com');
-        $user->setPassword($this->encodePassword($user,'darthPass'));
+        $user->setPlainPassword('darthPass');
 
 
         $admin = new User();
@@ -29,7 +29,7 @@ class LoadUsersData implements FixtureInterface, ContainerAwareInterface, Ordere
         $admin->setEmail('wayne@deathstar.com');
         $admin->setRoles(array('ROLE_ADMIN'));
         $admin->setIsActive(true);
-        $admin->setPassword($this->encodePassword($admin,'waynePass'));
+        $admin->setPlainPassword('waynePass');
 
 
         $manager->persist($user);
@@ -37,10 +37,7 @@ class LoadUsersData implements FixtureInterface, ContainerAwareInterface, Ordere
         $manager->flush();
     }
 
-    private function encodePassword(User $user, $plainPassword){
-        $encoder = $this->container->get('security.encoder_factory')->getEncoder($user);
-        return $encoder->encodePassword($plainPassword, $user->getSalt());
-    }
+
 
 
     /**
