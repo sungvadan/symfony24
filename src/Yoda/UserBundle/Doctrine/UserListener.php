@@ -23,9 +23,17 @@ class UserListener
         }
     }
 
+    public function preUpdate(LifecycleEventArgs $args){
+        $entity = $args->getObject();
+        if($entity instanceof User){
+            $this->encodePassword($entity);
+        }
+    }
+
     private function encodePassword(User $user){
         $plainPassword = $user->getPlainPassword();
-
+        if(!$plainPassword)
+            return;
         $encoder = $this->encoderFactory->getEncoder($user);
         $user->setPassword($encoder->encodePassword($plainPassword, $user->getSalt()));
     }

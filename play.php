@@ -30,8 +30,7 @@ use Doctrine\ORM\EntityManager;
 /* @var EntityManager $em */
 $em = $container->get('doctrine')->getManager();
 $user = $em->getRepository('UserBundle:User')->findOneByUsernameOrEmail('darth');
+$user->setPlainPassword('test');
+$em->persist($user);
+$em->flush();
 
-foreach ($user->getEvents() as  $event)
-{
-    var_dump($event->getName());
-}
