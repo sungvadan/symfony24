@@ -11,3 +11,4 @@
 /composer.phar
 /.idea/*
 /web/css/*
+/node_modules/*
